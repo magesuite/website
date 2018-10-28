@@ -1,0 +1,40 @@
+{
+  "name": "magesuite-website",
+  "version": "1.0.0",
+  "description": "The website of MageSuite project",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "public": "next -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "pictures": "gulp pictures",
+    "export": "npm run build && next export"
+  },
+  "author": "Creativestyle GmbH",
+  "license": "ISC",
+  "dependencies": {
+    "markdown-in-js": "^1.1.4",
+    "next": "^7.0.2",
+    "next-redux-wrapper": "^2.0.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-ga": "^2.5.3",
+    "react-no-ssr": "^1.1.0",
+    "react-player": "^1.6.6",
+    "react-redux": "^5.1.0",
+    "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-responsive": "^2.11.0",
+    "redux-devtools-extension": "^2.13.5"
+  }
+}
