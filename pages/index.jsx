@@ -1,3 +1,7 @@
+import Layout from '../components/layout';
+import Why from '../sections/why';
 export default () => (
-    <h1>MageSuite</h1>
+    <Layout>
+        <Why/>
+    </Layout>
 )
