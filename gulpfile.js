@@ -12,15 +12,55 @@ gulp.task('fonts', function () {
 		;
 	});
 
-// gulp.task('pictures', () =>
-//     gulp.src('static-full/*')
-//         .pipe(imagemin([            
-//             imagemin.gifsicle({interlaced: true}),
-//             imagemin.jpegtran({progressive: true}),
-//             imagemin.optipng({optimizationLevel: 5}),
-//         ]))
-//         .pipe(gulp.dest('static'))
-// );
+gulp.task('optimize-g-pics', () =>
+    gulp.src('static-full/pictures/g*')
+        .pipe(imagemin([            
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+        ]))
+        .pipe(gulp.dest('static/pictures'))
+);
+
+gulp.task('generate-g-webp', () =>
+    gulp.src('static-full/pictures/*.{jpg,png}')
+    .pipe($.responsive({
+        'g-*': [
+            {
+                width: 480,
+                rename: {
+                    suffix: '-small',
+                    extname: '.webp',
+                },
+                quality: 80
+            }, 
+            {
+                width: 480 * 2,
+                rename: {
+                    suffix: '-large',
+                    extname: '.webp',
+                },
+                quality: 80
+            }, 
+        ],
+    }, {
+        // Use progressive (interlace) scan for JPEG and PNG output
+        progressive: true,
+        // Strip all metadata
+        withMetadata: false,
+        errorOnEnlargement: false,
+        skipOnEnlargement: false,
+        progressive: true,
+        errorOnUnusedConfig: false,
+        withoutEnlargement: true,
+        errorOnUnusedImage: false
+        
+    }))
+    .pipe(gulp.dest('static/pictures'))
+);
+
+gulp.task('g', ['optimize-g-pics', 'generate-g-webp']);
+
 
 gulp.task('resize-pictures', () => {
   return gulp.src('static-full/pictures/*.{jpg,png}')
@@ -172,10 +212,9 @@ gulp.task('resize-pictures', () => {
                     suffix: '-large',
                     extname: '.png',
                 },
-                quality: 80
             }, 
             {
-                width: 1200,
+                width: 900*2,
                 rename: {
                     suffix: '-large@2x',
                     extname: '.png',
@@ -215,14 +254,20 @@ gulp.task('resize-pictures', () => {
         // The output quality for JPEG, WebP and TIFF output formats
         quality: 70,
         // Use progressive (interlace) scan for JPEG and PNG output
-        progressive: true,
+        progressive: false,
         // Strip all metadata
         withMetadata: false,
         errorOnEnlargement: false,
         skipOnEnlargement: false,
         progressive: true,
+        errorOnUnusedConfig: false,
+        withoutEnlargement: true,
+        errorOnUnusedImage: false
         
     }))
+    .pipe(imagemin([                    
+                     imagemin.optipng({optimizationLevel: 5}),
+                 ]))
     .pipe(gulp.dest('static/pictures'));
 });
 
