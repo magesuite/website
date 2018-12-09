@@ -36,7 +36,8 @@ export const colors = {
     r: '#d81323',
     w: '#fff',
     b: '#222222',
-    p: '#FF7844'
+    p: '#FF7844',
+    p2: '#FF0009',
 }
 
 export const mediaQueries = {
