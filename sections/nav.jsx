@@ -24,7 +24,7 @@ class Nav extends Component {
                         <li><Link href=""><a>Why MageSuite?</a></Link></li>
                         <li><Link href=""><a>Features</a></Link></li>
                         <li><Link href=""><a>Made with</a></Link></li>
-                        <li><Link href=""><a>What you get?</a></Link></li>
+                        {/* <li><Link href=""><a>What you get?</a></Link></li> */}
                         <li><Link href=""><a>Cloud</a></Link></li>
                     </ul>
                 </nav>
@@ -58,7 +58,7 @@ class Nav extends Component {
                     }
                     .menu li {
                         font-size: ${rem(14)};
-                        font-weight: 400;
+                        font-weight: 700;
                         text-transform: uppercase;
                         display: block;
                     }

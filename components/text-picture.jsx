@@ -1,8 +1,10 @@
+import { rem } from "./styles";
+
 export default ({children, picture}) => (
     <section>
         <div className="content">
             {children}
-        </div>
+        </div>        
         <figure>
             {picture}
         </figure>
@@ -11,11 +13,14 @@ export default ({children, picture}) => (
                 display: flex;
             }
             .content {
-                flex: 1 1;
+                width: 40%;
+                flex: 0 0 40%;
             }        
             figure {
+                width: 60%;
                 flex: 0 0 60%;
-                padding-left: 10rem;
+                text-align: right;
+                
             }        
         `}</style>            
     </section>

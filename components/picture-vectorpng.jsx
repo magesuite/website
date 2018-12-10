@@ -1,4 +1,4 @@
-export default ({image, alt, title = alt}) => {
+export default ({image, alt, title = alt, widthDesktop='100%', marginDesktop=0}) => {
     if ( title == 'none' ) title='';
     return (
         <picture>
@@ -10,6 +10,11 @@ export default ({image, alt, title = alt}) => {
             <style jsx>{`
                     img {
                         width: 100%;
+                    }
+                    picture {
+                        display: inline-block;
+                        width: ${widthDesktop};
+                        margin: ${marginDesktop};
                     }
                 `}</style>
         </picture>

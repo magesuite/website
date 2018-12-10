@@ -3,34 +3,39 @@ import FeatureIcon from "./feature-icon";
 import IconPerformance from "./icons/icon-performance";
 import IconSecurity from './icons/icon-security';
 import IconDesign from './icons/icon-design';
-import IconUx from './icons/icon-ux';
+import IconNews from './icons/icon-news';
 import IconCert from './icons/icon-cert';
 
 export default props => (
     <ul className="wrapper">
+        <li>
+            <FeatureIcon text="Content Constructor" icon={
+                <IconPerformance/>
+            }/>            
+        </li> 
         <li>
             <FeatureIcon text="High Performance" icon={
                 <IconPerformance/>
             }/>            
         </li> 
         <li>
-            <FeatureIcon text="High level security" icon={
+            <FeatureIcon text="Security and&nbsp;GDPR" icon={
                 <IconSecurity/>
             }/>            
         </li> 
         <li>
-            <FeatureIcon text="Individual design" icon={
-                <IconDesign/>
-            }/>            
-        </li> 
-        <li>
-            <FeatureIcon text="Usability" icon={
-                <IconUx/>
-            }/>            
-        </li> 
-        <li>
-            <FeatureIcon text="Developers" icon={
+            <FeatureIcon text="Search Engine" icon={
                 <IconCert/>
+            }/>            
+        </li> 
+        <li>
+            <FeatureIcon text="Marketing" icon={
+                <IconNews/>
+            }/>            
+        </li> 
+        <li>
+            <FeatureIcon text="UX" icon={
+                <IconDesign/>
             }/>            
         </li> 
         <style jsx>{`
@@ -38,10 +43,11 @@ export default props => (
                 display: flex;
                 list-style: none;
                 margin: 0;
+                padding: 0;
             }
 
             li {
-                flex: 1 1 20%;
+                flex: 1 1 16%;
             }
             `}</style>
     </ul>

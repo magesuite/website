@@ -10,12 +10,15 @@ export default ({text, icon}) => (
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                height: 100%;
             }
 
             h5 {
                 font-size: ${rem(14)};
                 text-transform: uppercase; 
                 margin: ${rem(20)} 0 0;
+                text-align: center;
+                line-height: 130%;
 
             }
 

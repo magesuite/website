@@ -15,7 +15,7 @@ export default props => (
         </Paragraph>
         <FeaturesTabs/>
         <TextPicture picture={(
-            <PictureVectorpng image="g-feature-cms"/>
+            <PictureVectorpng image="g-feature-cms" widthDesktop="70%" marginDesktop="1rem"/>
         )}>
             <Headline HtmlTag="h3" size="20">Why MageSuite is so good?</Headline>
             <Paragraph size="20">
@@ -26,9 +26,8 @@ export default props => (
         
         <style jsx>{`
             article {
-                padding: ${rem(70)};
+                padding: ${rem(70)} ${rem(80)};
             }
-
         `}</style>
 
     </article>

@@ -36,57 +36,7 @@ class Layout extends Component {
                 <footer>
                     <Footer/>
                 </footer>
-                <style global jsx>{`
-                    @font-face {
-                        font-family: 'Roboto';
-                        font-style: normal;
-                        font-weight: 100;
-                        src: url(/static/fonts/Roboto-normal-100.woff) format('woff');
-                        unicode-range: U+0-10FFFF;
-                    }
-    
-                    @font-face {
-                        font-family: 'Roboto';
-                        font-style: normal;
-                        font-weight: 400;
-                        src: url(/static/fonts/Roboto-normal-400.woff) format('woff');
-                        unicode-range: U+0-10FFFF;
-                    }
-    
-                    @font-face {
-                        font-family: 'Roboto';
-                        font-style: normal;
-                        font-weight: 700;
-                        src: url(/static/fonts/Roboto-normal-700.woff) format('woff');
-                        unicode-range: U+0-10FFFF;
-                    }
-    
-                    @font-face {
-                        font-family: 'Roboto Condensed';
-                        font-style: normal;
-                        font-weight: 300;
-                        src: url(/static/fonts/Roboto_Condensed-normal-300.woff) format('woff');
-                        unicode-range: U+0-10FFFF;
-                    }
-    
-                    @font-face {
-                        font-family: 'Roboto Condensed';
-                        font-style: normal;
-                        font-weight: 400;
-                        src: url(/static/fonts/Roboto_Condensed-normal-400.woff) format('woff');
-                        unicode-range: U+0-10FFFF;
-                    }
-    
-                    @font-face {
-                        font-family: 'Roboto Condensed';
-                        font-style: normal;
-                        font-weight: 700;
-                        src: url(/static/fonts/Roboto_Condensed-normal-700.woff) format('woff');
-                        unicode-range: U+0-10FFFF;
-                    }
-    
-    
-    
+                <style global jsx>{`    
                     .limited-width {
                         max-width: 1368px;
                         margin: auto;
@@ -133,9 +83,6 @@ class Layout extends Component {
                         z-index: 1000;
                     }
     
-                    
-    
-                    
                 `}</style>
                 
                 <style jsx>{`
