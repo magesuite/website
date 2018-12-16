@@ -7,7 +7,7 @@ export default ({HtmlTag, children, size, centered}) => {
     }
     switch(Number(size)) {
         case 20:
-            fontSize = 40;
+            fontSize = 36;
             break;
         case 10:
         default: 

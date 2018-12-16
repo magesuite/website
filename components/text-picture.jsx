@@ -15,6 +15,7 @@ export default ({children, picture}) => (
             .content {
                 width: 40%;
                 flex: 0 0 40%;
+                padding-top: ${rem(74)};
             }        
             figure {
                 width: 60%;

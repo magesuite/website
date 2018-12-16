@@ -1,17 +1,24 @@
 import { rem, colors } from "./styles";
-export default ({children, size, centered}) => {
+export default ({children, size, centered, distance}) => {
     let fontSize;
+    let distanceSize;
     let classes = [ 'p' ];
     if(centered) {
         classes.push('-centered');
     }
+
+    if(distance) {
+        classes.push('-with-distance');
+    }
     switch(Number(size)) {
         case 20:
-            fontSize = 20;
+            fontSize = 18;
+            distanceSize = 50;
             break;
         case 10:
         default: 
             fontSize = 24;
+            distanceSize = 74;
 
     }
     return (
@@ -21,13 +28,16 @@ export default ({children, size, centered}) => {
                     font-size: ${rem(fontSize)};
                     max-width: 50rem;
                     color: ${colors.g};
-                    line-height: 140%;
-                    margin-bottom: ${rem(80)};
+                    line-height: 160%;
                 }
                 .-centered {                    
                     margin-left: auto;
                     margin-right: auto;
                     text-align: center;
+                }
+
+                .-with-distance {
+                    margin-bottom: ${rem(distanceSize)};
                 }
             `}</style>
         </p>

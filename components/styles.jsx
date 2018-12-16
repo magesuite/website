@@ -37,7 +37,7 @@ export const colors = {
     w: '#fff',
     b: '#222222',
     p: '#FF7844',
-    p2: '#FF0009',
+    p2: '#FF5F21',
 }
 
 export const mediaQueries = {
