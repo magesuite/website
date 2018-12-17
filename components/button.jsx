@@ -2,13 +2,13 @@ import { rem, colors } from "./styles";
 export default ({size, children, text}) => {
     let classes = [ 'button' ];
     return (
-        <div className={classes.join(' ')}>
-            <div className="caption">{text}</div>
-            <div className="icon">
+        <button className={classes.join(' ')}>
+            <label className="caption">{text}</label>
+            <i className="icon">
                 <svg viewBox="0 0 12 19" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.4 11.621l-6.9 6.9-2.121-2.122 6.9-6.899-6.9-6.9L2.5.48l9.02 9.02-2.12 2.121z" fill="#FFF" filRule="evenodd"/>
                 </svg>
-            </div>
+            </i>
             <style jsx>{`
                 .button {
                     color: ${colors.w};
@@ -16,8 +16,13 @@ export default ({size, children, text}) => {
                     border: none;
                     display: inline-flex;
                     padding: 0;                    
-                    overflow: hidden;
+                    overflow: visible;
                     height: ${rem(64)};
+                    font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                            "Roboto", "Helvetica Neue", Arial, sans-serif, 
+                            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";                
+                    font-size: 0;
+                    font-weight: 700;
                 }
                 .caption {
                     flex: 1 1 1rem;
@@ -26,6 +31,8 @@ export default ({size, children, text}) => {
                     font-size: ${rem(24)};
                     line-height: 100%;
                     align-self: center;
+                    display: block;
+                    
                     
                 }
                 .icon {                    
@@ -34,10 +41,9 @@ export default ({size, children, text}) => {
                     position: relative;
                     width: 3rem;
                     display: flex;
-                    
+                    height: ${rem(64)};   
                     
                 }
-
                 .icon svg {
                     width: 1rem;
                     margin-left: 0.5rem;
@@ -54,6 +60,6 @@ export default ({size, children, text}) => {
 
                 
             `}</style>
-        </div>
+        </button>
     )
 }

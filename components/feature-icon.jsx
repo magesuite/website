@@ -7,7 +7,7 @@ export default ({text, icon, id, active, clickedHandler}) => {
     return (    
         <a className={wrapperClasses.join(' ')} onClick={(e) => clickedHandler(id)}>
             <div className="icon">{icon}</div>
-            <h5>{text}</h5>
+            <div className="caption">{text}</div>
 
             <style jsx>{`
                 .wrapper {
@@ -17,7 +17,7 @@ export default ({text, icon, id, active, clickedHandler}) => {
                     height: 100%;
                 }
 
-                h5 {
+                .caption {
                     font-size: ${rem(14)};
                     text-transform: uppercase; 
                     margin: ${rem(16)} 0 0;

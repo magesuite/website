@@ -71,7 +71,7 @@ export default class Why extends Component {
                 
                 <style jsx>{`
                     article {
-                        padding: ${rem(74)} ${rem(80)};
+                        padding: ${rem(74)} ${rem(96)};
                     }
                 `}</style>
 
