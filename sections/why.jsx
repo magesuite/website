@@ -18,10 +18,10 @@ export default class Why extends Component {
 
         return (
             <article>
-                <Headline HtmlTag="h2" centered>Why MageSuite is so good?</Headline>
+                <Headline HtmlTag="h2" centered>What is MageSuite?</Headline>
                 
                 <Paragraph centered distance>
-                    Proident aliquip est aute id velit est consectetur laboris culpa ipsum. Mollit Lorem quis voluptate laboris consectetur tempor occaecat id veniam commodo excepteur dolor magna. Ex laborum dolor non occaecat enim culpa culpa culpa ex amet excepteur deserunt nulla consequat. Lorem dolor consequat do nulla est ad esse mollit fugiat nostrud ipsum. Culpa voluptate est deserunt et magna aliquip pariatur magna magna. Magna sint laboris labore eiusmod officia sit incididunt excepteur velit.
+                MageSuite is a collection of OpenSource modules adding valuable features and enhancements that are missing in your native Magento 2 Open Source shop.
                 </Paragraph>
                 <FeaturesTabs tabClicked={this.tabClicked.bind(this)} activeTab={this.state.tab}/>
                 
@@ -29,9 +29,9 @@ export default class Why extends Component {
                     <TextPicture picture={(
                         <PictureVectorpng image="g-feature-cms" widthDesktop="70%" marginDesktop="1rem"/>
                     )}>
-                        <Headline HtmlTag="h3" size="20">Content constructor</Headline>
+                        <Headline HtmlTag="h3" size="20">Content Constructor</Headline>
                         <Paragraph size="20" distance>
-                            Veniam est Lorem eu cupidatat minim ea cupidatat eu non. Ex tempor laborum laboris amet fugiat adipisicing nulla cillum ad cupidatat et exercitation. Elit quis ex cillum sunt esse qui ex. Velit dolor anim excepteur consequat aute enim. Dolore aliquip non consequat anim. Qui proident quis pariatur exercitation amet duis in.
+                            The MageSuite Content Constructor is an enhancement of the Magento CMS giving you the possibility to build up any CMS page by combining numerous types of components within a few clicks and with no need to develop separate templates. In addition to that, it allows you to use these components also on your category page and product detail page. The Content Constructor is a free and Open Source alternative to the Magento 2 PageBuilder.
                         </Paragraph>
                         <Button text="Find out more"/>
                     </TextPicture>
@@ -40,9 +40,9 @@ export default class Why extends Component {
                     <TextPicture picture={(
                         <PictureVectorpng image="g-feature-cms" widthDesktop="70%" marginDesktop="1rem"/>
                     )}>
-                        <Headline HtmlTag="h3" size="20">Performance</Headline>
+                        <Headline HtmlTag="h3" size="20">High Performance</Headline>
                         <Paragraph size="20" distance>
-                            Velit proident consectetur minim commodo et ullamco qui velit nisi sit et excepteur ex. Magna anim sint veniam ad eiusmod aliqua aliqua ullamco adipisicing aliquip culpa ea non. Commodo eiusmod dolor fugiat exercitation irure cillum ex ex nostrud deserunt cillum pariatur in qui. Esse ex fugiat esse ipsum veniam officia cillum ipsum deserunt duis veniam nostrud. Ad deserunt non velit aliqua ipsum culpa minim.
+                            To boost loading and rendering times of your Magento webshop, MageSuite provides a couple of performance improvements in the frontend and backend. Furthermore, the Cache Warmer rebuilds your Varnish cache for the most important Magento pages after having flushed the cache. The MageSuite Cloud makes your Magento Open Source even ready for AWS. It increases the availability of your webshop in traffic peaks by providing features like horizontal auto-scaling.
                         </Paragraph>
                     </TextPicture>
                 )}
@@ -50,9 +50,9 @@ export default class Why extends Component {
                     <TextPicture picture={(
                         <PictureVectorpng image="g-feature-cms" widthDesktop="70%" marginDesktop="1rem"/>
                     )}>
-                        <Headline HtmlTag="h3" size="20">Security</Headline>
+                        <Headline HtmlTag="h3" size="20">Security &amp; GDPR</Headline>
                         <Paragraph size="20" distance>
-                        Elit sint tempor et consectetur est. Sit veniam ut quis do irure quis do reprehenderit elit aliqua amet id. In officia reprehenderit dolor qui enim laborum id nulla Lorem sint. Duis do do sint fugiat consectetur aliquip dolor qui ut non. Deserunt labore consequat voluptate do fugiat labore incididunt consequat. Ex deserunt consequat nostrud excepteur incididunt duis nisi.
+                            To maximize the security of personal data, MageSuite provides a module, which helps you to meet the requirements of the General Data Protection Regulation (GDPR / DSGVO). It restricts access to customer data and anonymizes personal information in your Magento admin panel so that users without suitable rights for processing data cannot see it.
                         </Paragraph>
                         
                     </TextPicture>
@@ -61,13 +61,36 @@ export default class Why extends Component {
                     <TextPicture picture={(
                         <PictureVectorpng image="g-feature-marketing" widthDesktop="70%" marginDesktop="1rem"/>
                     )}>
-                        <Headline HtmlTag="h3" size="20">Search</Headline>
+                        <Headline HtmlTag="h3" size="20">Search Engine</Headline>
                         <Paragraph size="20" distance>
-                        Ipsum tempor esse excepteur est anim laboris labore occaecat ex magna esse deserunt. Lorem in aliqua eu proident. Laboris duis laborum est consequat id culpa anim ipsum ea minim veniam. Sint voluptate consectetur cupidatat aliqua ex. Eu aliqua deserunt commodo duis sunt officia ea adipisicing.
+                            MageSuite integrates the elasticsearch engine by using the OpenSource elasticsuite extension and providing you with a comprehensive feature set for your Magento search such as advanced auto-suggest, improved category filters, optimizing the search result relevance and many more. In addition to that MageSuite enhances the search UX, allows also horizontal layered navigation filters and integrates elasticsuite with the Content Constructor components.
                         </Paragraph>
                         
                     </TextPicture>
                 )}
+                { (this.state.tab == 'marketing') && (
+                    <TextPicture picture={(
+                        <PictureVectorpng image="g-feature-marketing" widthDesktop="70%" marginDesktop="1rem"/>
+                    )}>
+                        <Headline HtmlTag="h3" size="20">Marketing</Headline>
+                        <Paragraph size="20" distance>
+                            To increase your sales and conversion rate, MageSuite provides you with many marketing features such as Daily Deals, Positive Indicators, Image Teasers inside the product grid, a simple blog functionality, product gifts, brand management, SEO improvements, identification and display of bestsellers and many more. Many of those have been integrated with the Content Constructor, and that allows you to create various marketing campaign landing pages.
+                        </Paragraph>
+                        
+                    </TextPicture>
+                )}
+                { (this.state.tab == 'ux') && (
+                    <TextPicture picture={(
+                        <PictureVectorpng image="g-feature-marketing" widthDesktop="70%" marginDesktop="1rem"/>
+                    )}>
+                        <Headline HtmlTag="h3" size="20">User Experience</Headline>
+                        <Paragraph size="20" distance>
+                            MageSuite improves the user experience for customers and administrators.   Beside smaller UX enhancements in the search, layered navigation filters, checkout, content management and mobile optimizations there are also brand new features such a the Product Finder. It allows you to define a product questionnaire within the Content Constructor. By that, you can consult your customers at any place of your Magento webshop which product fits best according to their requirements.
+                        </Paragraph>
+                        
+                    </TextPicture>
+                )}
+
                 
                 <style jsx>{`
                     article {
