@@ -1,10 +1,13 @@
 import { rem, colors } from "./styles";
-export default ({HtmlTag, children, size, centered}) => {
+export default ({HtmlTag, children, size, centered, bold=true, light=false}) => {
     let fontSize;
     let classes = [ 'headline' ];
     if(centered) {
         classes.push('-centered');
     }
+    let fontWeight = bold ? 700 : 400;
+    let color = light ? colors.w : colors.d;
+
     switch(Number(size)) {
         case 20:
             fontSize = 36;
@@ -20,9 +23,10 @@ export default ({HtmlTag, children, size, centered}) => {
                 .headline {
                     font-size: ${rem(fontSize)};                    
                     display: block;                                       
-                    color: ${colors.d};
+                    color: ${color};
                     margin-bottom: ${rem(26)};                
                     max-width: 50rem; 
+                    font-weight: ${fontWeight};
                 }
                 .-centered {                    
                     margin-left: auto;

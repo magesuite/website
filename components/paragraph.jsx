@@ -1,6 +1,7 @@
 import { rem, colors } from "./styles";
-export default ({children, size, centered, distance}) => {
+export default ({children, size, centered, distance, light=false}) => {
     let fontSize;
+    let color = light ? colors.w : colors.d;
     let distanceSize;
     let classes = [ 'p' ];
     if(centered) {
@@ -17,7 +18,7 @@ export default ({children, size, centered, distance}) => {
             break;
         case 10:
         default: 
-            fontSize = 24;
+            fontSize = 20;
             distanceSize = 74;
 
     }
@@ -27,7 +28,7 @@ export default ({children, size, centered, distance}) => {
                 .p {
                     font-size: ${rem(fontSize)};
                     max-width: 50rem;
-                    color: ${colors.g};
+                    color: ${color};
                     line-height: 160%;
                 }
                 .-centered {                    
