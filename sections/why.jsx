@@ -27,7 +27,7 @@ export default class Why extends Component {
                 
                 { (this.state.tab == 'cms') && (
                     <TextPicture picture={(
-                        <PictureVectorpng image="g-feature-cms" widthDesktop="70%" marginDesktop="1rem"/>
+                        <PictureVectorpng image="g-feature-cms" widthDesktop="60%" marginDesktop="2rem 9rem 0 0"/>
                     )}>
                         <Headline HtmlTag="h3" size="20">Content Constructor</Headline>
                         <Paragraph size="20" distance>
@@ -38,7 +38,7 @@ export default class Why extends Component {
                 )}
                 { (this.state.tab == 'perf') && (
                     <TextPicture picture={(
-                        <PictureVectorpng image="g-feature-cms" widthDesktop="70%" marginDesktop="1rem"/>
+                        <PictureVectorpng image="g-feature-performance" widthDesktop="80%" marginDesktop="2rem 1rem 0 0"/>
                     )}>
                         <Headline HtmlTag="h3" size="20">High Performance</Headline>
                         <Paragraph size="20" distance>
@@ -48,7 +48,7 @@ export default class Why extends Component {
                 )}
                 { (this.state.tab == 'security') && (
                     <TextPicture picture={(
-                        <PictureVectorpng image="g-feature-cms" widthDesktop="70%" marginDesktop="1rem"/>
+                        <PictureVectorpng image="g-feature-security" widthDesktop="50%" marginDesktop="2rem 11rem 0 0"/>
                     )}>
                         <Headline HtmlTag="h3" size="20">Security &amp; GDPR</Headline>
                         <Paragraph size="20" distance>
@@ -59,7 +59,7 @@ export default class Why extends Component {
                 )}
                 { (this.state.tab == 'search') && (
                     <TextPicture picture={(
-                        <PictureVectorpng image="g-feature-marketing" widthDesktop="70%" marginDesktop="1rem"/>
+                        <PictureVectorpng image="g-feature-search" widthDesktop="60%" marginDesktop="2rem 9rem 0 0"/>
                     )}>
                         <Headline HtmlTag="h3" size="20">Search Engine</Headline>
                         <Paragraph size="20" distance>
@@ -70,7 +70,7 @@ export default class Why extends Component {
                 )}
                 { (this.state.tab == 'marketing') && (
                     <TextPicture picture={(
-                        <PictureVectorpng image="g-feature-marketing" widthDesktop="70%" marginDesktop="1rem"/>
+                        <PictureVectorpng image="g-feature-marketing" widthDesktop="60%" marginDesktop="2rem 9rem 0 0"/>
                     )}>
                         <Headline HtmlTag="h3" size="20">Marketing</Headline>
                         <Paragraph size="20" distance>
@@ -81,7 +81,7 @@ export default class Why extends Component {
                 )}
                 { (this.state.tab == 'ux') && (
                     <TextPicture picture={(
-                        <PictureVectorpng image="g-feature-marketing" widthDesktop="70%" marginDesktop="1rem"/>
+                        <PictureVectorpng image="g-feature-ux" widthDesktop="90%" marginDesktop="1rem 1rem 0 0"/>
                     )}>
                         <Headline HtmlTag="h3" size="20">User Experience</Headline>
                         <Paragraph size="20" distance>
