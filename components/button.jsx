@@ -1,8 +1,9 @@
 import { rem, colors } from "./styles";
-export default ({size, children, text}) => {
+export default ({size, children, text, href, HtmlTag='button'}) => {
     let classes = [ 'button' ];
+    
     return (
-        <button className={classes.join(' ')}>
+        <HtmlTag className={classes.join(' ')} href={href}>
             <label className="caption">{text}</label>
             <i className="icon">
                 <svg viewBox="0 0 12 19" xmlns="http://www.w3.org/2000/svg">
@@ -23,6 +24,8 @@ export default ({size, children, text}) => {
                             "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";                
                     font-size: 0;
                     font-weight: 700;
+                    text-decoration: none;
+                    
                 }
                 .caption {
                     flex: 1 1 1rem;
@@ -32,7 +35,7 @@ export default ({size, children, text}) => {
                     line-height: 100%;
                     align-self: center;
                     display: block;
-                    
+                    ${HtmlTag == 'a' && 'cursor: pointer'} ;
                     
                 }
                 .icon {                    
@@ -60,6 +63,6 @@ export default ({size, children, text}) => {
 
                 
             `}</style>
-        </button>
+        </HtmlTag>
     )
 }
