@@ -29,7 +29,7 @@ export const distancesMacro = {
 }
 
 export const colors = {
-    d: '#232427',
+    d: '#222222',
     g: '#4D4D4D',
     l: '#E5E5E5',
     l2: '#9B9B9B',

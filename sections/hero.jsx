@@ -2,7 +2,7 @@ import Headline from "../components/headline";
 import Paragraph from "../components/paragraph";
 
 export default () => (
-    <section>
+    <section className="max-width">
         <video autoplay="true" loop muted>
             <source src="/static/video/hero-video.mp4" type="video/mp4" />
         </video>

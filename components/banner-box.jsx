@@ -1,6 +1,6 @@
 export default ({image, children}) => (
     <section>
-        <div>
+        <div className="max-width">
         { children }
         </div>
         <style jsx>{`

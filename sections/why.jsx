@@ -17,7 +17,7 @@ export default class Why extends Component {
     render() {
 
         return (
-            <article>
+            <article className="limited-width">
                 <Headline HtmlTag="h2" centered>What is MageSuite?</Headline>
                 
                 <Paragraph centered distance>
@@ -94,7 +94,7 @@ export default class Why extends Component {
                 
                 <style jsx>{`
                     article {
-                        padding: ${rem(74)} ${rem(96)};
+                        padding: ${rem(80)} ${rem(100)};
                     }
                 `}</style>
 

@@ -41,6 +41,11 @@ class Layout extends Component {
                         max-width: 1368px;
                         margin: auto;
                     }
+
+                    .max-width {
+                        max-width: 1440px;
+                        margin: auto;
+                    }
     
                     *, *:before, *:after {
                         box-sizing: border-box;
