@@ -7,11 +7,9 @@ export default () => (
             <source src="/static/video/hero-video.mp4" type="video/mp4" />
         </video>
         <div className="slogan">
-            <Headline HtmlTag="p" light centered>MageSuite is easy!</Headline>
+            <Headline HtmlTag="p" light centered>Open Source CMS for Magento 2</Headline>
             <Paragraph centered distance light>
-                MageSuite is a collection of OpenSource modules 
-                adding valuable features and enhancements that 
-                are missing in your native Magento 2 Open Source shop.
+            Content Constructor is a CMS module within MageSuite and a free and Open Source alternative to Magento PageBuilder. Check out the demo video.
             </Paragraph>
         </div>
         <style jsx>{`
