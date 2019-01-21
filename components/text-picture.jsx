@@ -1,7 +1,7 @@
 import { rem } from "./styles";
 
-export default ({children, picture}) => (
-    <section>
+export default ({children, picture, hide=false}) => (
+    <section className={hide ? '--hidden' : '' }>
         <div className="content">
             {children}
         </div>        
@@ -11,6 +11,9 @@ export default ({children, picture}) => (
         <style jsx>{`
             section {
                 display: flex;
+            }
+            .--hidden {
+                display: none;
             }
             .content {
                 width: 40%;
