@@ -53,7 +53,7 @@ export default () => (
             .col-2:after {
                 content: '';
                 position: absolute;
-                top: calc(50% - 1rem);
+                top: calc(50% - 2rem);
                 left: 0;
                 border-left: 2rem solid white;
                 border-top: 2rem solid transparent;
