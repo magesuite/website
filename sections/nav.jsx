@@ -18,24 +18,29 @@ class Nav extends Component {
         
         return (
             <div className="nav">
-                <div className="logo"><Logo/></div>
-                <nav>
-                    <ul className="menu">
-                        <li><Link href=""><a>Why MageSuite?</a></Link></li>
-                        <li><Link href=""><a>Features</a></Link></li>
-                        <li><Link href=""><a>Made with</a></Link></li>
-                        {/* <li><Link href=""><a>What you get?</a></Link></li> */}
-                        <li><Link href=""><a>Cloud</a></Link></li>
-                    </ul>
-                </nav>
-                <div className="demo">
+                <div className="inner max-width">
+                    <div className="logo"><Logo/></div>
+                    <nav>
+                        <ul className="menu">
+                            <li><Link href="/#why"><a>Why MageSuite?</a></Link></li>
+                            {/* <li><Link href=""><a>Features</a></Link></li> */}
+                            {/* <li><Link href=""><a>Made with</a></Link></li> */}
+                            <li><a href="https://github.com/magesuite/">GitHub</a></li>
+                            {/* <li><Link href=""><a>Cloud</a></Link></li> */}
+                        </ul>
+                    </nav>
+                    <div className="demo">
+                    </div>
                 </div>
+                
                 
                 <style jsx>{`
                     .nav {
+                        box-shadow: 0 0 1rem -0.1rem gray;
+                    }
+                    .inner {
                         display: flex;
                         align-items: center;
-                        box-shadow: 0 0 1rem -0.1rem gray;
                     }
                     .logo {
                         padding: ${rem(20)} ${rem(30)};

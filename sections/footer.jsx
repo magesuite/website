@@ -3,14 +3,14 @@ import MageSuiteLogo from '../components/logos/magesuite-white';
 
 export default (props) => (
     <div className="outer">
-        <div className="inner">
+        <div className="inner max-width">
             <div className="col-1">
                 <ul>
                     <li>
                         <a href="https://demo.magesuite.io/">Visit demo store</a>
                     </li>
                     <li>
-                        <a href="https://github.com/magesuite/">Magesuite on GitHub</a>
+                        <a href="https://github.com/magesuite/">MageSuite on GitHub</a>
                     </li>
                 </ul>
             

@@ -1,6 +1,8 @@
+import { rem } from "./styles";
+
 export default ({image, children}) => (
-    <section>
-        <div className="max-width">
+    <section className="max-width">
+        <div>
         { children }
         </div>
         <style jsx>{`
@@ -8,7 +10,8 @@ export default ({image, children}) => (
                 position: relative;
                 background-image: url('/static/pictures/${image}-large.jpg');  
                 background-size: cover;    
-                padding: 3rem;          
+                padding: 3rem;  
+                margin-bottom: ${rem(40)};        
             }
             div {
                 background: white;

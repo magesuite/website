@@ -21,6 +21,7 @@ export default () => (
             section {
                 position: relative;
                 width: 100%;
+                overflow: hidden;
             }
 
             .slogan {

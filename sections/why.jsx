@@ -17,7 +17,7 @@ export default class Why extends Component {
     render() {
 
         return (
-            <article className="limited-width">
+            <article className="limited-width" id="why">
                 <Headline HtmlTag="h2" centered>What is MageSuite?</Headline>
                 
                 <Paragraph centered distance>
