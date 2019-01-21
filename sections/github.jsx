@@ -15,16 +15,14 @@ export default () => (
             <div className="col-1">
                 <Headline HtmlTag="h2" size={20}>MageSuite on GitHub</Headline>
                 <Paragraph size={20}>
-                    Quis non ad cupidatat ea minim aliquip non eiusmod non. 
-                    Laborum reprehenderit id id do Lorem in nulla fugiat nulla enim. 
+                    This project is maintained and updated permanently. Checkout the newest version on GitHub. Contributors are welcome.
                 </Paragraph>
             </div>
             <div className="col-2">
                 <Paragraph size={20} distance>
-                    Quis non ad cupidatat ea minim aliquip non eiusmod non. 
-                    Laborum reprehenderit id id do Lorem in nulla fugiat nulla enim. 
+                    MageSuite has been released under the Open Source License v. 3.0 (OSL-3.0). You can download it for free on GitHub. 
                 </Paragraph>
-                <Button text="Get for free" HtmlTag="a" href="https://github.com/magesuite/magesuite"/>
+                <Button text="Download" HtmlTag="a" href="https://github.com/magesuite/magesuite"/>
             </div>
             
         </div>
