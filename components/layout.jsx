@@ -9,7 +9,7 @@ import { acceptCookies } from '../data/store';
 class Layout extends Component {
     render() {
         var HtmlTag = this.props.tag || 'div';
-        var title = this.props.title || 'creativestyle'
+        var title = this.props.title || 'MageSuite'
 
         return (
             <HtmlTag className="root">
