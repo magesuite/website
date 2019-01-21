@@ -15,13 +15,10 @@ export default () => (
         <style jsx>{`
             video {
                 width: 100%;
-                height: 100%;
             }
 
             section {
                 position: relative;
-                width: 100%;
-                overflow: hidden;
             }
 
             .slogan {
@@ -31,14 +28,7 @@ export default () => (
                 transform: translate(-50%, -50%);
             }
 
-            @supports (object-fit: cover) {
-                video {
-                    object-fit: cover;
-                }
-                section {
-                    height: 100vh;
-                }
-            }
+            
             
             `}</style>
     </section>
