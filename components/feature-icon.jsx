@@ -24,6 +24,8 @@ export default ({text, icon, id, active, clickedHandler}) => {
                     text-align: center;
                     line-height: 130%;
 
+                    transition: color 150ms ease-in;
+
                 }
 
                 a {
@@ -32,7 +34,9 @@ export default ({text, icon, id, active, clickedHandler}) => {
                     display: block;
                     padding: 0 1rem ${rem(30)};
                     border-bottom: 1px solid ${colors.l};  
-                    cursor: pointer;       
+                    cursor: pointer;
+
+                    transition: border-color 150ms ease-in;
                 }
 
                 a:hover, .-active {
@@ -44,6 +48,8 @@ export default ({text, icon, id, active, clickedHandler}) => {
                 .icon {
                     width: ${rem(56)};
                     height: ${rem(70)};
+
+                    transition: fill 150ms ease-in;
                 }
                 
             `}</style>
