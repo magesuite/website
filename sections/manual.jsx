@@ -12,9 +12,9 @@ export default () => (
                 )}>
             <Headline HtmlTag="h3" size="20">User Manual</Headline>
             <Paragraph size="20" distance>
-                The MageSuite Content Constructor is an enhancement of the Magento CMS giving you the possibility to build up any CMS page by combining numerous types of components within a few clicks and with no need to develop separate templates. In addition to that, it allows you to use these components also on your category page and product detail page. The Content Constructor is a free and Open Source alternative to the Magento 2 PageBuilder.
+            This user manual explains all current features of the MageSuite. This includes the functionalities of the MageSuite CMS "Content Constructor" and its components as well as numerous marketing and UX extensions for Magento 2. Download the user manual for free and learn how you can now use Magento 2 for content commerce.
             </Paragraph>
-            <Button text="Download" href="http://manual" HtmlTag="a"/>
+            <Button text="Download" href="http://bit.ly/2RY1pu0" HtmlTag="a"/>
         </PictureText>
 
         <style jsx>{`
