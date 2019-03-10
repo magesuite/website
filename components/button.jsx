@@ -7,7 +7,7 @@ export default ({size, children, text, href, HtmlTag='button'}) => {
             <label className="caption">{text}</label>
             <i className="icon">
                 <svg viewBox="0 0 12 19" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.4 11.621l-6.9 6.9-2.121-2.122 6.9-6.899-6.9-6.9L2.5.48l9.02 9.02-2.12 2.121z" fill="#FFF" filRule="evenodd"/>
+                    <path d="M9.4 11.621l-6.9 6.9-2.121-2.122 6.9-6.899-6.9-6.9L2.5.48l9.02 9.02-2.12 2.121z" fill="#FFF" fillRule="evenodd"/>
                 </svg>
             </i>
             <style jsx>{`
