@@ -8,11 +8,11 @@ class Cookies extends Component {
         return !this.props.acceptCookies && (            
             <div className="cookies-info">
                 <div className="accept" onClick={e=>{ this.props.dispatch(acceptCookies()) }}>
-                    Unsere Website setzt Cookies ein. Mit der Weiternutzung unserer Website willigen Sie ein, dass wir Tracking-Cookies setzen.
+                    Our website uses cookies. By continuing to use our website, you consent to the use of tracking cookies.
                 </div>
-                <div className="more">
-                    {/* <Link2 href="/datenschutz" text="Mehr erfahren" light noMargin/> */}
-                </div>
+                {/* <div className="more">
+                    <Link2 href="/datenschutz" text="Mehr erfahren" light noMargin/>
+                </div> */}
                 <style jsx>{`
 
                     .cookies-info {
@@ -20,9 +20,11 @@ class Cookies extends Component {
                         bottom: 1rem;                        
                         right: 1rem;
                         width: 22rem;
-                        background: #232427;
+                        background: ${colors.d};
                         padding: 1rem;
                         transition: opacity 0.3s ease;
+                        font-size: 1rem;
+                        color: white;
                     }
 
                     @media ${mediaQueries.mobile} {
