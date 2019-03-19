@@ -25,7 +25,7 @@ export default class TabSwitchAnimation extends Component {
             visible: false
         });
 
-        setTimeout(() => this.midTransition(), 100);
+        setTimeout(() => this.midTransition(), 75);
     }
 
     midTransition() {
@@ -36,7 +36,7 @@ export default class TabSwitchAnimation extends Component {
         this.next = null;
 
         /* Give it some time to load */
-        setTimeout(() => this.endTransition(), 100);
+        setTimeout(() => this.endTransition(), 75);
     }
 
     endTransition() {
@@ -64,31 +64,18 @@ export default class TabSwitchAnimation extends Component {
                         position: relative;
                     }
 
-                    .switcher::after {
-                        content: ' ';
-                        position: absolute;
-                        width: 2rem;
-                        top: 0;
-                        right: 0;
-                        bottom: 0;
-                        background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-                    }
-
                     .switcher__inner {
-                        transition: .1s ease-in;
+                        transition: .075s ease-in;
                         width: 100%;
                         height: 100%;
                     }
 
-
                     .switcher--visible .switcher__inner {
                         opacity: 1;
-                        transform: translate(0, 0);
                     }
 
                     .switcher--hidden .switcher__inner{
                         opacity: 0;
-                        transform: translate(100%, 0);
                     }
 
                 `}</style>
