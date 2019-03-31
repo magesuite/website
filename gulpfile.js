@@ -272,6 +272,39 @@ gulp.task('resize-pictures', () => {
 });
 
 
+gulp.task('bg', () => {
+    return gulp.src('static-full/pictures/*.{jpg,png}')
+      .pipe($.responsive({
+  
+          'bg-*.jpg': [
+              {
+                  width: 1440 * 2,
+                  rename: {
+                      suffix: '-large',
+                      extname: '.jpg',
+                  },
+              }
+          ],
+  
+        }, {
+          // Global configuration for all images
+          // The output quality for JPEG, WebP and TIFF output formats
+          quality: 70,
+          // Use progressive (interlace) scan for JPEG and PNG output
+          progressive: false,
+          // Strip all metadata
+          withMetadata: false,
+          errorOnEnlargement: false,
+          skipOnEnlargement: false,
+          progressive: true,
+          errorOnUnusedConfig: false,
+          withoutEnlargement: true,
+          errorOnUnusedImage: false
+          
+      }))
+      .pipe(gulp.dest('static/pictures'));
+  });
+
   gulp.task('resize', ['resize-pictures']);
 
   gulp.task('images', () => {
