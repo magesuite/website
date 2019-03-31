@@ -24,7 +24,7 @@ class Cookies extends Component {
                         padding: 1rem;
                         transition: opacity 0.3s ease;
                         font-size: 1rem;
-                        color: white;
+                        color: ${colors.l2};;
                     }
 
                     @media ${mediaQueries.mobile} {

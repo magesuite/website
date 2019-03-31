@@ -30,6 +30,7 @@ export default ({children, size, centered, distance, light=false}) => {
                     max-width: 50rem;
                     color: ${color};
                     line-height: 160%;
+                    font-weight: 300;
                 }
                 .-centered {                    
                     margin-left: auto;

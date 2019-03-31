@@ -22,7 +22,7 @@ class Layout extends Component {
                     <meta property="og:type" content="website" />
                     { this.props.ogimage && <meta property="og:image" content={"https://www.creativestyle.de/static/pictures/"+this.props.ogimage+"-large.jpg"} />}
                     <meta property="og:locale" content="en_US" />
-                    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;subset=latin-ext" rel="stylesheet"></link>
+                    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&amp;subset=latin-ext" rel="stylesheet"></link>
                 </Head>
                 <header>
                     <Nav/>

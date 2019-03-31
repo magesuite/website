@@ -1,5 +1,5 @@
 import PictureText from '../components/picture-text';
-import { rem, colors } from "../components/styles";
+import { rem } from "../components/styles";
 import PictureVectorpng from "../components/picture-vectorpng";
 import Headline from "../components/headline";
 import Paragraph from "../components/paragraph";
