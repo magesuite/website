@@ -6,20 +6,24 @@ import Paragraph from "../components/paragraph";
 import Button from "../components/button";
 
 export default () => (
-    <article>
+    <article className="limited-width">
         <PictureText picture={(
-                    <PictureVectorpng image="g-manual" widthDesktop="80%" marginDesktop="0"/>
+                    <PictureVectorpng image="g-manual" widthDesktop="70%" marginDesktop="0"/>
                 )}>
             <Headline HtmlTag="h3" size="20">User Manual</Headline>
             <Paragraph size="20" distance>
-            This user manual explains all current features of the MageSuite. This includes the functionalities of the MageSuite CMS "Content Constructor" and its components as well as numerous marketing and UX extensions for Magento 2. Download the user manual for free and learn how you can now use Magento 2 for content commerce.
+            The user manual explains all current features of the MageSuite. 
+            It includes the functionalities of the MageSuite CMS "Content 
+            Constructor" and its components as well as numerous marketing 
+            and UX extensions for Magento 2.<br/>Download the user manual for 
+            free and learn how you can now use Magento 2 for content commerce.
             </Paragraph>
             <Button text="Download" href="http://bit.ly/2RY1pu0" HtmlTag="a"/>
         </PictureText>
 
         <style jsx>{`
             article {
-                padding: ${rem(80)} ${rem(100)};
+                padding: 0 ${rem(100)} ${rem(80)};
             }
 
         `}</style>
