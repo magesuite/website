@@ -22,9 +22,12 @@ export default ({children, picture, hide=false}) => (
             }        
             figure {
                 width: 60%;
-                flex: 0 0 60%;
+                height: 34rem;
                 text-align: right;
-                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-top: 1rem;
             }        
         `}</style>            
     </section>
