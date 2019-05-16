@@ -7,6 +7,17 @@ import ReactGA from 'react-ga';
 import { GA_ID } from '../etc/config';
 
 class MagesuiteApp extends App {
+    
+    static async getInitialProps ({ Component, ctx }) {
+        let pageProps = {}
+    
+        if (Component.getInitialProps) {
+            pageProps = await Component.getInitialProps(ctx)
+        }
+    
+        return { pageProps }
+    }
+
     render () {
         const {Component, pageProps, reduxStore} = this.props
         return (

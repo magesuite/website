@@ -23,6 +23,7 @@ export default ({text, icon, id, active, clickedHandler}) => {
                     margin: ${rem(16)} 0 0;
                     text-align: center;
                     line-height: 130%;
+                    transition: color 150ms ease-in;
 
                 }
 
@@ -32,13 +33,15 @@ export default ({text, icon, id, active, clickedHandler}) => {
                     display: block;
                     padding: 0 1rem ${rem(30)};
                     border-bottom: 1px solid ${colors.l};  
-                    cursor: pointer;       
+                    cursor: pointer;  
+                    transition: border-color 150ms ease-in;     
                 }
 
                 a:hover, .-active {
                     color: ${colors.d};
                     fill: ${colors.p};  
-                    border-bottom: 1px solid ${colors.p};         
+                    border-bottom: 1px solid ${colors.p};   
+                    transition: fill 150ms ease-in;      
                 }
 
                 .icon {
