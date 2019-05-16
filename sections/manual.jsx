@@ -4,9 +4,10 @@ import PictureVectorpng from "../components/picture-vectorpng";
 import Headline from "../components/headline";
 import Paragraph from "../components/paragraph";
 import Button from "../components/button";
+import styled from 'styled-components';
 
 export default () => (
-    <article className="limited-width">
+    <Article className="limited-width">
         <PictureText picture={(
                     <PictureVectorpng image="g-manual" widthDesktop="70%" marginDesktop="0"/>
                 )}>
@@ -20,12 +21,9 @@ export default () => (
             </Paragraph>
             <Button text="Download" href="http://bit.ly/2RY1pu0" HtmlTag="a"/>
         </PictureText>
-
-        <style jsx>{`
-            article {
-                padding: 0 ${rem(100)} ${rem(80)};
-            }
-
-        `}</style>
-    </article>
+    </Article>
 )
+
+const Article = styled.article`
+    padding: 0 ${rem(100)} ${rem(80)};
+`

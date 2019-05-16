@@ -6,6 +6,7 @@ import Headline from "../components/headline";
 import Paragraph from "../components/paragraph";
 import Button from "../components/button";
 import { Component } from 'react';
+import styled from 'styled-components';
 
 export default class Why extends Component {
     constructor(props) {
@@ -17,7 +18,7 @@ export default class Why extends Component {
     render() {
 
         return (
-            <article className="limited-width" id="why">
+            <Article className="limited-width" id="why">
                 <Headline HtmlTag="h2" centered>What is MageSuite?</Headline>
                 
                 <Paragraph centered distance>
@@ -76,16 +77,8 @@ export default class Why extends Component {
                     <Paragraph size="20" distance>
                         MageSuite improves the user experience for customers and administrators.   Beside smaller UX enhancements in the search, layered navigation filters, checkout, content management and mobile optimizations there are also brand new features such a the Product Finder. It allows you to define a product questionnaire within the Content Constructor. By that, you can consult your customers at any place of your Magento webshop which product fits best according to their requirements.
                     </Paragraph>
-                    
                 </TextPicture>
-                
-                <style jsx>{`
-                    article {
-                        padding: ${rem(80)} ${rem(100)};
-                    }
-                `}</style>
-
-            </article>
+            </Article>
         )
     }
     tabClicked(id) {
@@ -94,3 +87,7 @@ export default class Why extends Component {
         })
     }
 }
+
+const Article = styled.article`
+    padding: ${rem(80)} ${rem(100)};
+`

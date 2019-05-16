@@ -52,7 +52,7 @@ const StyledLogo = styled(Logo)`
     
 `
 
-const NavContainer = styled.div`
+const NavContainer = styled.nav`
     flex: 1 0;
     text-align: center;
 `
