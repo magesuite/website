@@ -33,7 +33,7 @@ export default class Why extends Component {
                     <Paragraph size="20" distance>
                         The MageSuite Content Constructor is an enhancement of the Magento CMS giving you the possibility to build up any CMS page by combining numerous types of components within a few clicks and with no need to develop separate templates. In addition to that, it allows you to use these components also on your category page and product detail page. The Content Constructor is a free and Open Source alternative to the Magento 2 PageBuilder.
                     </Paragraph>
-                    {/* <Button text="Find out more"/> */}
+                    {/* <Button>Find out more</Button> */}
                 </TextPicture>
                 <TextPicture picture={(
                     <PictureVectorpng image="g-feature-performance" widthDesktop="80%" marginDesktop="2rem 1rem 0 0"/>

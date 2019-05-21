@@ -9,13 +9,13 @@ import styled from 'styled-components';
 
 export default () => (
     <Article className="limited-width">
-        <CloudLogo className="logo-cloud">
+        <CloudLogo>
             <MagesuiteCloud/>
         </CloudLogo>
         <Paragraph size={10} distance light centered>
             MageSuite is released under the Open Source License v. 3.0 (OSL-3.0). You can download it for free on GitHub. 
         </Paragraph>
-        <Button text="Learn more" HtmlTag="a" href="https://www.creativestyle.de/magento-cloud/"/>
+        <Button as="a" href="https://www.creativestyle.de/magento-cloud/">Learn more</Button>
     </Article>
 )
 
