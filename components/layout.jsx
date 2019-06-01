@@ -5,14 +5,14 @@ import Cookies from './cookies';
 import { Component } from 'react';
 import { connect } from 'react-redux';
 import { acceptCookies } from '../data/store';
+import styled, {createGlobalStyle} from 'styled-components';
 
 class Layout extends Component {
     render() {
-        var HtmlTag = this.props.tag || 'div';
         var title = this.props.title || 'MageSuite'
 
         return (
-            <HtmlTag className="root">
+            <Root className={this.props.className} as={this.props.as}>
                 <Head>                
                     <title>{title}</title>
                     <meta name="description" content={this.props.description}/>
@@ -20,91 +20,18 @@ class Layout extends Component {
                     <meta name="robots" content="index, follow"/>
                     <link rel="icon" href="/static/images/favicon.png"/>
                     <meta property="og:type" content="website" />
-                    { this.props.ogimage && <meta property="og:image" content={"https://www.creativestyle.de/static/pictures/"+this.props.ogimage+"-large.jpg"} />}
+                    {/* { this.props.ogimage && <meta property="og:image" content={"https://www.creativestyle.de/static/pictures/"+this.props.ogimage+"-large.jpg"} />} */}
                     <meta property="og:locale" content="en_US" />
-                    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&amp;subset=latin-ext" rel="stylesheet"></link>
+                    {/* <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&amp;subset=latin-ext" rel="stylesheet"></link> */}
                 </Head>
-                <header>
-                    <Nav/>
-                </header>
-                <div className="content">
+                <GlobalStyle/>
+                <Nav as="header"/>
+                <Content>
                     {this.props.children}
-                </div>
-                <aside>
-                    <Cookies/>
-                </aside>                
-                <footer>
-                    <Footer/>
-                </footer>
-                <style global jsx>{`    
-                    .limited-width {
-                        max-width: 1368px;
-                        margin: auto;
-                    }
-
-                    .max-width {
-                        max-width: 1440px;
-                        margin: auto;
-                    }
-    
-                    *, *:before, *:after {
-                        box-sizing: border-box;
-                    }            
-                    
-                    html {
-                        font-size: 16px;   
-                        font-display: swap; 
-                        
-                    }
-    
-                    @media (max-width: 480px) {
-                        html {
-                            font-size: 4.3vw;
-                        }    
-                        .limited-width {
-                            max-width: 100vw;
-                            overflow: hidden;
-                        }
-                    }
-    
-                    @media (min-width: 481px) and (max-width: 1368px) {
-                        html {
-                            font-size: 1.145vw;
-                        }    
-                    }
-    
-                    p, h1, h2, h3, figure, dt, dl, dd, body {
-                        margin: 0;
-                    }
-    
-                    body {
-                        font-size: 0;
-                        font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI",
-                            "Roboto", "Helvetica Neue", Arial, sans-serif, 
-                            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";                
-                    }
-                    aside {
-                        position: relative;
-                        z-index: 1000;
-                    }
-    
-                `}</style>
-                
-                <style jsx>{`
-                    .root {
-                        position: relative;
-                    }
-                    
-                    .content {
-                        position: relative;
-                        z-index: 10;
-                    }
-                    footer {
-                        position: relative;
-                        z-index: ${this.props.stickFooter? 1 : 5};
-                    }
-                `}</style>
-            </HtmlTag>
+                </Content>
+                <StyledCookies/>
+                <Footer/>    
+            </Root>
         );
     }
 
@@ -146,3 +73,65 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(Layout);
+
+export const MaxWidth = styled.div`
+    max-width: 1440px;
+    margin: auto;
+`
+
+export const LimitedWidth = styled.div`
+    max-width: 1368px;
+    margin: auto;
+
+    @media (max-width: 480px) {
+        max-width: 100vw;
+        overflow: hidden;
+    }
+`
+
+const Root = styled(MaxWidth)`
+    position: relative;
+`
+
+const Content = styled(LimitedWidth)`
+    position: relative;
+    z-index: 10;
+`
+const StyledCookies=styled(Cookies)`
+    z-index: 100;
+`
+
+const GlobalStyle = createGlobalStyle`
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }            
+
+    html {
+        font-size: 16px;   
+        font-display: swap; 
+        
+    }
+
+    @media (max-width: 480px) {
+        html {
+            font-size: 4.3vw;
+        }    
+    }
+
+    @media (min-width: 481px) and (max-width: 1368px) {
+        html {
+            font-size: 1.145vw;
+        }    
+    }
+
+    p, h1, h2, h3, figure, dt, dl, dd, body {
+        margin: 0;
+    }
+
+    body {
+        font-size: 0;
+        font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI",
+            "Roboto", "Helvetica Neue", Arial, sans-serif, 
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";                
+    }
+`

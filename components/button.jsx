@@ -23,10 +23,7 @@ const Button = styled.button`
     display: inline-flex;
     padding: 0;                    
     overflow: visible;
-    height: ${rem(64)};
-    font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI",
-            "Roboto", "Helvetica Neue", Arial, sans-serif, 
-            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";                
+    height: ${rem(64)};          
     font-size: 0;
     font-weight: 700;
     text-decoration: none;

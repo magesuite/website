@@ -1,31 +1,27 @@
 import { rem } from "./styles";
+import styled from 'styled-components';
 
 export default ({children, picture, hide=false}) => (
-    <section className={hide ? '--hidden' : '' }>
-        <div className="content">
+    <Section hide={hide}>
+        <Content>
             {children}
-        </div>        
-        <figure>
+        </Content>
+        <Figure>
             {picture}
-        </figure>
-        <style jsx>{`
-            section {
-                display: flex;
-            }
-            .--hidden {
-                display: none;
-            }
-            .content {
-                width: 40%;
-                flex: 0 0 40%;
-                padding-top: ${rem(74)};
-            }        
-            figure {
-                width: 60%;
-                flex: 0 0 60%;
-                text-align: right;
-                
-            }        
-        `}</style>            
-    </section>
+        </Figure>
+    </Section>
 )
+
+const Section = styled.section`
+    display: ${p => p.hide ? "none" : "flex"};
+`
+const Figure = styled.figure`
+    width: 60%;
+    flex: 0 0 60%;
+    text-align: right;
+`
+const Content = styled.div`
+    width: 40%;
+    flex: 0 0 40%;
+    padding-top: ${rem(74)};
+`

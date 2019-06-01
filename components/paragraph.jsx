@@ -1,47 +1,21 @@
 import { rem, colors } from "./styles";
-export default ({children, size, centered, distance, light=false}) => {
-    let fontSize;
-    let color = light ? colors.w : colors.d;
-    let distanceSize;
-    let classes = [ 'p' ];
+import styled from 'styled-components';
+
+export const centeredMix=({centered}) => {
     if(centered) {
-        classes.push('-centered');
+        return `
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;        `
     }
-
-    if(distance) {
-        classes.push('-with-distance');
-    }
-    switch(Number(size)) {
-        case 20:
-            fontSize = 18;
-            distanceSize = 50;
-            break;
-        case 10:
-        default: 
-            fontSize = 20;
-            distanceSize = 74;
-
-    }
-    return (
-        <p className={classes.join(' ')}>{children}
-            <style jsx>{`
-                .p {
-                    font-size: ${rem(fontSize)};
-                    max-width: 50rem;
-                    color: ${color};
-                    line-height: 160%;
-                    font-weight: 300;
-                }
-                .-centered {                    
-                    margin-left: auto;
-                    margin-right: auto;
-                    text-align: center;
-                }
-
-                .-with-distance {
-                    margin-bottom: ${rem(distanceSize)};
-                }
-            `}</style>
-        </p>
-    )
 }
+
+export default styled.p`
+    font-size: ${props => props.size == 20 ? rem(18) : rem(20)};
+    max-width: 50rem;
+    color: ${props => props.light ? colors.w : colors.d};
+    line-height: 160%;
+    font-weight: 300;
+    ${centeredMix};
+    margin-bottom: ${props => props.distance ? rem(props.size == 20 ? 50 : 74) : 0};
+`

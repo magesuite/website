@@ -1,4 +1,4 @@
-import { colors, distances, mediaQueries, rem } from '../components/styles';
+import { colors, mediaQueries, rem } from '../components/styles';
 import MageSuiteLogo from '../components/logos/magesuite-white';
 import styled from 'styled-components';
 

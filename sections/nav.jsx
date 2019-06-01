@@ -1,6 +1,6 @@
 import Logo from "../components/logos/magesuite";
 import Link from 'next/link'
-import { colors, mediaQueries, distances, rem } from "../components/styles";
+import { colors, mediaQueries, rem } from "../components/styles";
 import { Component } from 'react';
 import {connect} from 'react-redux';
 import {acceptCookies} from '../data/store'
@@ -10,12 +10,12 @@ class Navigations extends Component {
     constructor(props) {
         super(props);
         this.state = {
-        }        
+        }
     }
 
     render() { 
         return (
-            <Bar>
+            <Bar as={this.props.as}>
                 <BarInner>
                     <StyledLogo/>
                     <NavContainer>
@@ -49,7 +49,6 @@ const BarInner = styled.div`
 const StyledLogo = styled(Logo)`
     padding: ${rem(20)} ${rem(30)};
     flex: 0 0 ${rem(250)};
-    
 `
 
 const NavContainer = styled.nav`

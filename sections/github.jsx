@@ -14,7 +14,7 @@ export default () => (
                 </GithubLogo>
             </Col0>
             <Col1>
-                <Headline HtmlTag="h2" size={20}>MageSuite on GitHub</Headline>
+                <Headline as="h2" size={20}>MageSuite on GitHub</Headline>
                 <Paragraph size={20}>
                     This project is maintained and updated permanently. Checkout the newest version on GitHub. Contributors are welcome.
                 </Paragraph>
