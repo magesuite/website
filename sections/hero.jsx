@@ -9,10 +9,9 @@ import {connect} from 'react-redux';
 import { playVideo as playVideoAction } from '../data/store';
 class Hero extends Component {
     render() { 
-        console.log(this.props);
         return (
         <Section as="section">
-            <Video autoplay="true" loop muted>
+            <Video loop muted ref="video">
                 <source src="/static/video/hero-video.mp4" type="video/mp4" />
             </Video>
             <Slogan>
@@ -26,8 +25,13 @@ class Hero extends Component {
         )
     }
     playVideo() {
-        console.log("Play");
         this.props.dispatch(playVideoAction("https://vimeo.com/229095695"));
+    }
+    componentDidMount() {
+        let mql = window.matchMedia('(min-width: 500px)');
+        if(mql.matches) {
+            this.refs.video.play();
+        }
     }
 }
 
