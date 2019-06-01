@@ -23,7 +23,13 @@ const Footer = styled.footer`
 `
 const Inner = styled.div`
     display: flex;
-    padding: ${rem(40)} ${rem(100)};
+    @media ${mediaQueries.mobile} {
+        flex-direction: column;
+        padding: ${rem(20)};
+    }
+    @media ${mediaQueries.tabletUp} {
+        padding: ${rem(40)} ${rem(100)};
+    }
 `
 
 const Area1 = styled.div`
@@ -37,6 +43,9 @@ const LinksList=styled.ul`
     display: flex;
     margin: 0;
     padding: 0;
+    @media ${mediaQueries.mobile} {
+        flex-direction: column;
+    }
 `
 const ListItem=styled.li`
     margin-right: 2rem;
@@ -45,9 +54,18 @@ const Link=styled.a`
     color: ${colors.l2};
     font-size: 1rem;
     text-decoration: none;
+    @media ${mediaQueries.mobile} {
+        margin-bottom: 1rem;
+        display: block;
+    }
 `
 const StyledLogo=styled(MageSuiteLogo)`
     opacity: 0.5;
     width: 10rem;
     display: inline-block;
+    @media ${mediaQueries.mobile} {
+        margin: 0 auto;
+        display: block;
+        margin-top: 1rem;
+    }
 `

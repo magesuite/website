@@ -1,4 +1,4 @@
-import { rem } from "./styles";
+import { rem, mediaQueries } from "./styles";
 import {MaxWidth} from './layout'
 import styled from 'styled-components';
 
@@ -15,7 +15,10 @@ const Section = styled(MaxWidth)`
     background-image: url('/static/pictures/${p => p.image}-large.jpg');  
     background-size: cover;    
     padding: 3rem;  
-    margin-bottom: ${rem(40)};        
+    margin-bottom: ${rem(40)};  
+    @media ${mediaQueries.mobile} {
+        padding: ${rem(20)};
+    }      
 `
 const Inner= styled.div`
     background: white;

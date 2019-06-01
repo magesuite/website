@@ -1,5 +1,5 @@
 import PictureText from '../components/picture-text';
-import { rem } from "../components/styles";
+import { rem, mediaQueries } from "../components/styles";
 import PictureVectorpng from "../components/picture-vectorpng";
 import Headline from "../components/headline";
 import Paragraph from "../components/paragraph";
@@ -9,7 +9,7 @@ import styled from 'styled-components';
 export default () => (
     <Article className="limited-width">
         <PictureText picture={(
-                    <PictureVectorpng image="g-manual" widthDesktop="70%" marginDesktop="0"/>
+                    <Picture image="g-manual"/>
                 )}>
             <Headline as="h3" size="20">User Manual</Headline>
             <Paragraph size="20" distance>
@@ -26,4 +26,17 @@ export default () => (
 
 const Article = styled.article`
     padding: 0 ${rem(100)} ${rem(80)};
+    @media ${mediaQueries.mobile} {
+        padding: ${rem(40)} ${rem(20)};
+    }
+`
+
+const Picture = styled(PictureVectorpng)`
+    @media ${mediaQueries.mobile} {
+        margin-bottom: 1rem;
+    }
+    @media ${mediaQueries.tabletUp} {
+        width: 70%;
+        margin: 0;
+    }
 `

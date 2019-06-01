@@ -54,6 +54,10 @@ const StyledLogo = styled(Logo)`
 const NavContainer = styled.nav`
     flex: 1 0;
     text-align: center;
+    @media ${mediaQueries.mobile} {
+        display: none;
+    }
+
 `
 
 const Nav = styled.ul`

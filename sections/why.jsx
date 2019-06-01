@@ -1,6 +1,6 @@
-import { rem, colors } from "../components/styles";
+import { rem, colors, mediaQueries } from "../components/styles";
 import FeaturesTabs from "../components/features-tabs";
-import TextPicture from "../components/text-picture";
+import TextPictureDefault from "../components/text-picture";
 import PictureVectorpng from "../components/picture-vectorpng";
 import Headline from "../components/headline";
 import Paragraph from "../components/paragraph";
@@ -90,4 +90,12 @@ export default class Why extends Component {
 
 const Article = styled.article`
     padding: ${rem(80)} ${rem(100)};
+    @media ${mediaQueries.mobile} {
+        padding: ${rem(40)} ${rem(20)};
+    }
+`
+const TextPicture = styled(TextPictureDefault)`
+    @media ${mediaQueries.mobile} {
+        margin-top: ${rem(20)};
+    }
 `

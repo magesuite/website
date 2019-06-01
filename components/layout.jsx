@@ -29,7 +29,7 @@ class Layout extends Component {
                 <Content>
                     {this.props.children}
                 </Content>
-                <StyledCookies/>
+                {/* <StyledCookies/> */}
                 <Footer/>    
             </Root>
         );
@@ -89,7 +89,7 @@ export const LimitedWidth = styled.div`
     }
 `
 
-const Root = styled(MaxWidth)`
+const Root = styled.div`
     position: relative;
 `
 

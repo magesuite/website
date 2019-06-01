@@ -27,7 +27,7 @@ const Link = styled.a`
     cursor: pointer;  
     transition: border-color 150ms ease-in;
 
-    &:hover, .-active {
+    &:hover, &.-active {
         color: ${colors.d};
         fill: ${colors.p};  
         border-bottom: 1px solid ${colors.p};   

@@ -7,6 +7,7 @@ import IconNews from './icons/icon-news';
 import IconCms from './icons/icon-cms';
 import IconSearch from './icons/icon-search';
 import styled from 'styled-components';
+import { mediaQueries } from './styles';
 
 export default ({tabClicked, activeTab}) => (
     <Tabs>
@@ -48,8 +49,15 @@ const Tabs=styled.ul`
     list-style: none;
     margin: 0;
     padding: 0;
+    @media ${mediaQueries.mobile} {
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
 `
 
 const Tab=styled.li`
     flex: 1 1 16%;  
+    @media ${mediaQueries.mobile} {
+        flex: 0 0 33%;  
+    }
 `

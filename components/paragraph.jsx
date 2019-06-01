@@ -1,4 +1,4 @@
-import { rem, colors } from "./styles";
+import { rem, colors, mediaQueries } from "./styles";
 import styled from 'styled-components';
 
 export const centeredMix=({centered}) => {
@@ -11,7 +11,13 @@ export const centeredMix=({centered}) => {
 }
 
 export default styled.p`
-    font-size: ${props => props.size == 20 ? rem(18) : rem(20)};
+    
+    @media ${mediaQueries.mobile} {
+        font-size: ${props => props.size == 20 ? rem(16) : rem(18)};                       
+    }
+    @media ${mediaQueries.tabletUp} {
+        font-size: ${props => props.size == 20 ? rem(18) : rem(20)};
+    }
     max-width: 50rem;
     color: ${props => props.light ? colors.w : colors.d};
     line-height: 160%;

@@ -1,9 +1,11 @@
 import Headline from "../components/headline";
 import Paragraph from "../components/paragraph";
 import styled from 'styled-components';
+import { mediaQueries } from "../components/styles";
+import { MaxWidth } from "../components/layout";
 
 export default () => (
-    <Section className="max-width">
+    <Section>
         <Video autoplay="true" loop muted>
             <source src="/static/video/hero-video.mp4" type="video/mp4" />
         </Video>
@@ -16,7 +18,7 @@ export default () => (
     </Section>
 )
 
-const Slogan = styled.div`
+const Slogan = styled(MaxWidth)`
     position: absolute;
     top: 50%;
     left: 50%;
@@ -25,8 +27,14 @@ const Slogan = styled.div`
 
 const Video = styled.video`
     width: 100%;
+    @media ${mediaQueries.mobile} {
+        display: none;
+    }
 `
 
 const Section = styled.section`
     position: relative;
+    @media ${mediaQueries.mobile} {
+        height: 100vh;
+    }
 `

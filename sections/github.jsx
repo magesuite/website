@@ -2,7 +2,7 @@ import BannerBox from "../components/banner-box";
 import Paragraph from "../components/paragraph";
 import Headline from "../components/headline";
 import Button from "../components/button";
-import { colors, rem } from "../components/styles";
+import { colors, rem, mediaQueries } from "../components/styles";
 import styled from 'styled-components';
 
 export default () => (
@@ -32,36 +32,67 @@ export default () => (
 const BannerBoxInner = styled.div`
     background: ${colors.w};
     display: flex;
+    @media ${mediaQueries.mobile} {
+        flex-direction: column;
+    }
 `
 
 const Col0 = styled.div`
     padding: ${rem(40)};
     display: flex;
     flex: 0 0;
+    @media ${mediaQueries.mobile} {
+        justify-content: center;
+    }
 `
 
 const Col1 = styled.div`
     padding: ${rem(40)} ${rem(80)} ${rem(40)} 0;
     flex: 1 1;
+    @media ${mediaQueries.mobile} {
+        padding: ${rem(20)};
+    }
 `
 
 const Col2 = styled.div`
     background: ${colors.l};
-    padding: ${rem(40)} ${rem(80)};
+    
     position: relative;
     flex: 1 1;
+    @media ${mediaQueries.mobile} {
+        padding: ${rem(40)} ${rem(20)} ${rem(20)};
+    }
+    @media ${mediaQueries.tabletUp} {
+        padding: ${rem(40)} ${rem(80)};
+    }
+
 
     &::after {
         content: '';
         position: absolute;
-        top: calc(50% - 2rem);
-        left: 0;
-        border-left: 2rem solid white;
-        border-top: 2rem solid transparent;
-        border-bottom: 2rem solid transparent;
+        @media ${mediaQueries.mobile} {
+            left: calc(50% - 2rem);
+            top: 0;
+            border-top: 2rem solid white;
+            border-left: 2rem solid transparent;
+            border-right: 2rem solid transparent;
+        }
+        @media ${mediaQueries.tabletUp} {
+            top: calc(50% - 2rem);
+            left: 0;
+            border-left: 2rem solid white;
+            border-top: 2rem solid transparent;
+            border-bottom: 2rem solid transparent;
+        }
+        
     }
 `
 
+const StyledButton = styled(Button)`
+    @media ${mediaQueries.mobile} {
+        margin: 0 auto;
+    }
+`
 const GithubLogo = styled.svg`
     width: ${rem(200)};
 `
