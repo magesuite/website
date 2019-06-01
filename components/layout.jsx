@@ -6,6 +6,7 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import { acceptCookies } from '../data/store';
 import styled, {createGlobalStyle} from 'styled-components';
+import VideoPlayer from './video-player';
 
 class Layout extends Component {
     render() {
@@ -25,6 +26,7 @@ class Layout extends Component {
                     {/* <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&amp;subset=latin-ext" rel="stylesheet"></link> */}
                 </Head>
                 <GlobalStyle/>
+                <VideoPlayer/>
                 <Nav as="header"/>
                 <Content>
                     {this.props.children}

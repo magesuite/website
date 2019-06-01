@@ -9,6 +9,7 @@ export const colors = {
     b: '#222222',
     p: '#FF7844',
     p2: '#FF5F21',
+    bl: '#1A4183'
     
 }
 

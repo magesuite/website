@@ -21,6 +21,7 @@ export default () => (
 
 const Article = styled.article`
     position: relative;
+    background-color: ${colors.bl};
     background-image: url('/static/pictures/bg-cloud-large.jpg');  
     background-size: cover;    
     padding: ${rem(80)} ${rem(100)};
