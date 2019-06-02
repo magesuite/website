@@ -4,7 +4,7 @@ import {centeredMix} from './paragraph';
 
 export default styled.h2`
     @media ${mediaQueries.mobile} {
-        font-size: ${props => props.size == 20 ? rem(30): rem(50)};                        
+        font-size: ${props => props.size == 20 ? rem(30): rem(46)};                        
     }
     @media ${mediaQueries.tabletUp} {
         font-size: ${props => props.size == 20 ? rem(36): rem(64)};                    

@@ -38,10 +38,12 @@ class Hero extends Component {
 export default connect()(Hero);
 
 const Slogan = styled.div`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @media ${mediaQueries.tabletUp} {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 `
 
 const Video = styled.video`
@@ -55,7 +57,8 @@ const Section = styled(MaxWidth)`
     position: relative;
     background-color: ${colors.bl};
     @media ${mediaQueries.mobile} {
-        height: calc(100vh - ${rem(96)});
+        min-height: calc(100vh - ${rem(96)});
+        padding: 2rem;
     }
 `
 
